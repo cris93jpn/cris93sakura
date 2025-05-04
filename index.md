@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://yarn.pm/normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabriela&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+
+    <title>Cris93sakura</title>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <a href="profile.html" class="logo_name"><img src="img/cris93sakura.png" alt="Cris93sakura"></a>
+            <a href="profile.html" class="logo"><img src="img/logo.png" alt="logo"></a>
+            <nav>
+                <ul class="nav">
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="works.html">Works</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div id="slideshow">
+            <img src="img/slide_1.png" alt="松田の桜" class="slide active">
+            <img src="img/slide_2.png" alt="松田の桜" class="slide">
+            <img src="img/slide_3.png" alt="浜松の桜" class="slide">
+            <img src="img/slide_4.png" alt="南伊豆の桜" class="slide">
+        </div>
+        <div id="content">
+            <h2>Profile</h2>
+            <div class="prof_img_txt">
+                <img src="img/profile_pic.png" alt="Cristina" class="img_profile">
+                <div>
+                    <div class="profile_txt">
+                        <h3>名前：</h3> 
+                        <p>Gallardo Fernandez Cristina</p>
+                    </div>
+                    <div class="profile_txt">
+                        <h3>出身：</h3>
+                        <p>スペイン</p>
+                    </div>
+                    <div class="profile_txt">
+                        <h3>誕生日：</h3>
+                        <p>1993年05月13日</p>
+                    </div>
+                    <div class="profile_txt">
+                        <h3>学校：</h3>
+                        <p>東京ビジネス・アカデミー</p>
+                    </div>
+                    <div class="profile_txt">
+                        <h3>趣味：</h3>
+                        <p>写真をとること、アニメを見る、トレーニング</p>
+                    </div>
+                </div>
+            </div>
+            <h2 class="h2_skills">Skills</h2>
+            <div class="skills">
+                <div class="skills_left">
+                    <div class="skills_pic">
+                        <p>CSS</p>
+                        <img src="img/level_4.png" alt="Experience level 3.5">
+                    </div>
+                    <div class="skills_pic">
+                        <p>HTML</p>
+                        <img src="img/level_4.png" alt="Experience level 3.5">
+                    </div>
+                    <div class="skills_pic">
+                        <p>Photoshop</p>
+                        <img src="img/level_2_5.png" alt="Experience level 2.5">
+                    </div>
+                    <div class="skills_pic">
+                        <p>Figma</p>
+                        <img src="img/level_2_5.png" alt="Experience level 2.5">
+                    </div>
+                </div>
+                <div class="skills_right">
+                    <div class="skills_pic">
+                        <p>Java</p>
+                        <img src="img/level_2_5.png" alt="Experience level 2.5">
+                    </div>
+                    <div class="skills_pic">
+                        <p>PHP</p>
+                        <img src="img/level_1_5.png" alt="Experience level 1.5">
+                    </div>
+                    <div class="skills_pic">
+                        <p>Python</p>
+                        <img src="img/level_2_5.png" alt="Experience level 2.5">
+                    </div>
+                    <div class="skills_pic">
+                        <p>SQL</p>
+                        <img src="img/level_3.png" alt="Experience level 3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer id="footer">
+        <a href="profile.html" class="foot_logo"><img src="img/logo.png" alt="logo" ></a>
+        <p><small>&copy;Copyright 2025</small></p>
+    </footer>
+</body>
+</html>
+
+<script>
+    const slides = document.querySelectorAll('.slide');
+    let currentIndex = 0;
+
+    function changeSlide() {
+        // Remove the "active" class from the current slide
+        slides[currentIndex].classList.remove('active');
+
+        // Increment the index, loop back to 0 if it exceeds the number of slides
+        currentIndex = (currentIndex + 1) % slides.length;
+
+        // Add the "active" class to the new slide
+        slides[currentIndex].classList.add('active');
+    }
+
+    // Change slide every 3 seconds (3000 milliseconds)
+    setInterval(changeSlide, 10000);
+</script>
