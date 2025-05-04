@@ -26,10 +26,10 @@ body {
 }
 
 .logo_name {
-    text-align: left center;
+    text-align: left;
     width: 220px;
     height: 35px;
-    margin: auto 15px;
+    margin: auto;
     margin-bottom: 2px;
 }
 
