@@ -26,7 +26,7 @@ body {
 }
 
 .logo_name {
-    text-align: left;
+    text-align: left center;
     width: 220px;
     height: 35px;
     margin: auto 15px;
