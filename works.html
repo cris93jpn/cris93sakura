@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://yarn.pm/normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabriela&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+
+    <title>Cris93sakura</title>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <a href="profile.html" class="logo_name"><img src="img/cris93sakura.png" alt="Cris93sakura"></a>
+            <a href="profile.html" class="logo"><img src="img/logo.png" alt="logo"></a>
+            <nav>
+                <ul class="nav">
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="works.html">Works</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div id="works">
+            <h2>Works</h2>
+            <div class="works_up">
+                <div class="works_line">
+                    <img src="img/minecraft_top_display.png" alt="Minecraft" class="work-img" data-work="minecraft">
+                    <p class="work_title">Minecraft Webページ</p>
+                    <p>1年生の9月の試験で作ったページ</p>
+                </div>
+                <div class="works_line">
+                    <img src="img/aircash_display.png" alt="AirCash" class="work-img" data-work="aircash">
+                    <p class="work_title">AirCash Webページ</p>
+                    <p>Figmaで先生と初めてのページ</p>
+                </div>
+                <div class="works_line">
+                    <img src="img/pres_display.png" alt="自己紹介" class="work-img" data-work="pres">
+                    <p class="work_title">好きなもののイメージ</p>
+                    <p>授業で自由に好きなもののイメージを作る</p>
+                </div>
+            </div>
+            <div class="works_up">
+                <div class="works_line">
+                    <img src="img/minecraft_top_display.png" alt="Minecraft" class="work-img" data-work="minecraft">
+                    <p class="work_title">Minecraft Webページ</p>
+                    <p>1年生の9月の試験で作ったページ</p>
+                </div>
+                <div class="works_line">
+                    <img src="img/minecraft_top_display.png" alt="Minecraft" class="work-img" data-work="minecraft">
+                    <p class="work_title">Minecraft Webページ</p>
+                    <p>1年生の9月の試験で作ったページ</p>
+                </div>
+                <div class="works_line">
+                    <img src="img/minecraft_top_display.png" alt="Minecraft" class="work-img" data-work="minecraft">
+                    <p class="work_title">Minecraft Webページ</p>
+                    <p>1年生の9月の試験で作ったページ</p>
+                </div>
+            </div>
+    </main>
+
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-content">
+            <img id="modal-image" class="modal-image" src="" alt="Work Image">
+            <div id="modal-gallery" class="modal-gallery">
+                </div>
+        </div>
+    </div>
+    <footer id="footer">
+        <a href="profile.html" class="foot_logo"><img src="img/logo.png" alt="logo" ></a>
+        <p><small>&copy;Copyright 2025</small></p>
+    </footer>
+</body>
+</html>
+
+<script>
+    // Get modal and elements
+var modal = document.getElementById("imageModal");
+var modalImage = document.getElementById("modal-image");
+var modalGallery = document.getElementById("modal-gallery");
+var closeBtn = document.getElementsByClassName("close")[0];
+
+// Event listener for image clicks
+document.querySelectorAll('.work-img').forEach(function(img) {
+    img.addEventListener('click', function(e) {
+        var workType = e.target.getAttribute('data-work');
+
+        // Show modal
+        modal.style.display = "block";
+
+        // Populate the gallery and set the first image as the main one
+        loadGallery(workType);
+    });
+});
+
+// Function to load images in the modal gallery based on work type
+function loadGallery(workType) {
+    // Clear previous gallery content
+    modalGallery.innerHTML = '';
+
+    // Example images for different works
+    var images = {
+        minecraft: [
+            'img/Top.png',
+            'img/Game.png'
+        ],
+        aircash: [
+            'img/AirCash_Top_PC.png',
+            'img/AirCash_Product_PC.png'
+        ],
+        pres: [
+            'img/presen.png'
+        ]
+    };
+
+    // Get images for the selected work
+    var workImages = images[workType] || [];
+
+    // If there are images, set the first one as the main image
+    if (workImages.length > 0) {
+        modalImage.src = workImages[0];
+    }
+
+    // Add images to the modal gallery
+    workImages.forEach(function(imgSrc) {
+        var imgElement = document.createElement('img');
+        imgElement.src = imgSrc;
+        imgElement.addEventListener('click', function() {
+            modalImage.src = imgSrc;
+        });
+        modalGallery.appendChild(imgElement);
+    });
+}
+
+// When the user clicks on <span> (x), close the modal
+closeBtn.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+}
+</script>

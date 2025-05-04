@@ -1,0 +1,312 @@
+.gabriela-regular {
+    font-family: "Gabriela", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .noto-sans-jp- {
+    font-family: "Noto Sans JP", serif;
+    font-optical-sizing: auto;
+    font-weight: 120;
+    font-style: normal;
+  }
+
+
+body {
+    background-color: #FFF1F6;
+    margin: auto;
+    font-family: "Gabriela", "Noto Sans JP", serif;
+}
+
+.header {
+    background-image: url(img/header.png);
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+}
+
+.logo_name {
+    text-align: left;
+    width: 220px;
+    height: 35px;
+    margin: auto 15px;
+    margin-bottom: 2px;
+}
+
+.logo {
+    text-align: center;
+    width: 89px;
+    height: 89px;
+    margin: auto;
+}
+.nav {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    text-align: right;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+.nav li {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.nav li a {
+    text-decoration: none;
+    color: #64283A;
+    background-color: #F8D9E3;
+    border-radius: 30px;
+    padding: 5px 15px;
+}
+
+.nav li a:hover {
+    text-decoration: none;
+    opacity: 0.9;
+}
+
+#footer {
+    background-image: url(img/footer.png);
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    width: 100%;
+}
+
+.foot_logo {
+    height: 89px;
+    margin: auto 15px;
+}
+
+#footer p {
+    margin: auto;
+}
+
+/*
+-----------------Profile-------------------------
+*/
+#slideshow {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Style the images inside the slideshow */
+.slide {
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.active {
+    opacity: 1;
+}
+
+/* Profile flex */
+
+#content {
+    width: 900px;
+    margin: 30px auto;
+}
+
+.prof_img_txt {
+    display: flex;
+}
+
+h2 {
+    color: #753C4D;
+}
+
+
+
+.img_profile {
+    width: 450px;
+    margin-right: 30px;
+}
+
+.profile_txt {
+    display: flex;
+    align-items: center;
+}
+
+.profile_txt h3{
+    margin-right: 10px;
+    color: #8E4D60;
+}
+
+.profile_txt p {
+    color: #7A384C;
+}
+
+/* Skills flex */
+
+.h2_skills {
+    margin-top: 60px;
+}
+
+.skills {
+    display: flex;
+}
+
+.skills_left {
+    justify-content: left;
+    width: 400px;
+    margin-right: 50px;
+}
+
+.skills_right {
+    justify-content: left;
+    width: 400px;
+}
+
+.skills_pic {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skills_pic img {
+    height: 21px;
+}
+
+
+/*
+-----------------Works---------------------
+*/
+
+#works {
+    margin: auto;
+    width: 1000px;
+}
+
+.works_up {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px auto;
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image and close button) */
+.modal-content {
+    position: relative;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    max-width: 900px;
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Modal Image */
+.modal-image {
+    width: 100%;
+    height: auto;
+}
+
+/* Modal Gallery */
+.modal-gallery {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    overflow-x: auto; /* Enable horizontal scrolling for the gallery */
+}
+
+.modal-gallery img {
+    height: 80px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+}
+
+.modal-gallery img:hover {
+    opacity: 1;
+}
+
+
+/*
+-----------------Contact---------------------
+*/
+
+#contact {
+    max-width: 800px;
+    margin: auto;
+}
+
+#contact h2{
+    text-align: center;
+    margin-top: 60px;
+}
+
+
+
+form p{
+    font-size: 18px;
+    font-weight: bold;
+    color: #8E4D60;
+    margin-bottom: 8px;
+}
+
+form input[type="text"]{
+    border-radius: 30px;
+    border: solid  #ce8299 2px;
+    height: 30px;
+    width: 100%;
+    text-indent: 5px;
+}
+
+form textarea {
+    width: 100%;
+    height: 150px;
+    border-radius: 30px;
+    border: solid  #ce8299 2px;
+    margin-bottom: 30px;
+}
+
+.btn-box {
+    text-align: center;
+}
+
+.btn {
+    width: 200px;
+    height: 40px;
+    border-radius: 30px;
+    border: 0px;
+    margin-bottom: 40px;
+    background-color: #F8D9E3;
+    color: #6D3848;
+    font-weight: bold;
+    font-size: 18px;
+}
