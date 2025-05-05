@@ -17,6 +17,7 @@
         <div class="header">
             <a href="profile.html" class="logo_name"><img src="img/cris93sakura.png" alt="Cris93sakura"></a>
             <a href="profile.html" class="logo"><img src="img/logo.png" alt="logo"></a>
+            <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
             <nav>
                 <ul class="nav">
                     <li><a href="profile.html">Profile</a></li>
@@ -72,13 +73,22 @@
                         <img src="img/level_4.png" alt="Experience level 3.5">
                     </div>
                     <div class="skills_pic">
+                        <p>JavaScript</p>
+                        <img src="img/level_1_5.png" alt="Experience level 1.5">
+                    </div>
+                    <div class="skills_pic">
                         <p>Photoshop</p>
                         <img src="img/level_2_5.png" alt="Experience level 2.5">
+                    </div>
+                    <div class="skills_pic">
+                        <p>Illustrator</p>
+                        <img src="img/level_1_5.png" alt="Experience level 1.5">
                     </div>
                     <div class="skills_pic">
                         <p>Figma</p>
                         <img src="img/level_2_5.png" alt="Experience level 2.5">
                     </div>
+                    
                 </div>
                 <div class="skills_right">
                     <div class="skills_pic">
@@ -87,7 +97,7 @@
                     </div>
                     <div class="skills_pic">
                         <p>PHP</p>
-                        <img src="img/level_1_5.png" alt="Experience level 1.5">
+                        <img src="img/level_2_5.png" alt="Experience level 2.5">
                     </div>
                     <div class="skills_pic">
                         <p>Python</p>
@@ -96,6 +106,10 @@
                     <div class="skills_pic">
                         <p>SQL</p>
                         <img src="img/level_3.png" alt="Experience level 3">
+                    </div>
+                    <div class="skills_pic">
+                        <p>JQuery</p>
+                        <img src="img/level_1_5.png" alt="Experience level 1.5">
                     </div>
                 </div>
             </div>
@@ -125,4 +139,13 @@
 
     // Change slide every 3 seconds (3000 milliseconds)
     setInterval(changeSlide, 10000);
+</script>
+<script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav');
+
+    menuToggle.addEventListener('click', () => {
+        nav.classList.toggle('visible');
+        nav.classList.toggle('hidden');
+    });
 </script>

@@ -17,6 +17,7 @@
         <div class="header">
             <a href="profile.html" class="logo_name"><img src="img/cris93sakura.png" alt="Cris93sakura"></a>
             <a href="profile.html" class="logo"><img src="img/logo.png" alt="logo"></a>
+            <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
             <nav>
                 <ul class="nav">
                     <li><a href="profile.html">Profile</a></li>
@@ -53,3 +54,12 @@
     </footer>
 </body>
 </html>
+<script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav');
+
+    menuToggle.addEventListener('click', () => {
+        nav.classList.toggle('visible');
+        nav.classList.toggle('hidden');
+    });
+</script>
