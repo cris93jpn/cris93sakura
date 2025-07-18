@@ -1,0 +1,492 @@
+/* 
+--------------Font types------------------- 
+*/
+.gabriela-regular {
+    font-family: "Gabriela", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.noto-sans-jp- {
+    font-family: "Noto Sans JP", serif;
+    font-optical-sizing: auto;
+    font-weight: 120;
+    font-style: normal;
+}
+
+
+/* 
+--------------------全部のページ--------------- 
+*/
+body {
+    background-color: #FFF1F6;
+    margin: auto;
+    font-family: "Gabriela", "Noto Sans JP", serif;
+}
+
+h2 {
+    color: #753C4D;
+}
+
+/* Header */
+.header {
+    background-image: url(img/header.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 0 15px;
+}
+
+/* ロゴと名前 */
+.logo_name {
+    text-align: left;
+    width: 220px;
+    height: 35px;
+    margin: auto 15px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    text-align: center;
+    width: 89px;
+    height: 89px;
+    margin: auto;
+}
+
+/*
+--------------nav---------------
+*/
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    text-align: right;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+.nav li {
+    list-style: none;
+}
+
+.nav li a {
+    text-decoration: none;
+    color: #64283A;
+    background-color:  #F8D9E3;
+    border-radius: 30px;
+    padding: 5px 15px;
+}
+
+.nav li a:hover {
+    text-decoration: none;
+    opacity: 0.9;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* Footer */
+#footer {
+    background-image: url(img/footer.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    width: 100%;
+}
+
+.foot_logo {
+    height: 89px;
+    margin: auto 15px;
+}
+
+
+#footer p {
+    margin: auto;
+}
+
+/*
+-----------------Profile-------------------------
+*/
+
+#slideshow {
+    width: 100%;
+    height: 30vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide {
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.active {
+    opacity: 1;
+}
+
+/* Perfil */
+#content {
+    width: 900px;
+    margin: 30px auto;
+}
+
+.prof_img_txt {
+    display: flex;
+}
+
+.img_profile {
+    width: 450px;
+    margin-right: 30px;
+}
+
+.profile_txt {
+    display: flex;
+    align-items: center;
+}
+
+.profile_txt h3 {
+    margin-right: 10px;
+    color: #8E4D60;
+}
+
+.profile_txt p {
+    color: #7A384C;
+}
+
+/* 
+-----------------Skills------------------------- 
+*/
+
+.h2_skills {
+    margin-top: 60px;
+}
+
+.skills {
+    display: flex;
+}
+
+.skills_left {
+    justify-content: left;
+    width: 400px;
+    margin-right: 50px;
+}
+
+.skills_right {
+    justify-content: left;
+    width: 400px;
+}
+
+.skills_pic {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skills_pic img {
+    height: 21px;
+}
+
+/*
+-----------------Works---------------------
+*/
+
+#works {
+    margin: auto;
+    width: 1000px;
+}
+
+.works_up {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+    text-align: center;
+    color: #8E4D60;
+    flex-direction: column;
+}
+
+.works_line img {
+    width: 350px;
+}
+
+.work_title {
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    color: #7A384C;
+}
+
+.work-img {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.work-img:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 100;
+  background-color: #f8cce2; /* rosita claro */
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 12px 16px;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  display: none; /* Oculto al inicio */
+  transition: opacity 0.3s ease;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #e79abc;
+}
+
+/* Modal Styles */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Modal Content (image and close button) */
+
+.modal-content {
+    position: relative;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    max-width: 900px;
+}
+
+/* Close Button */
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Modal Image */
+
+.modal-image {
+    width: 100%;
+    height: auto;
+}
+
+/*
+-----------------Contact---------------------
+*/
+#contact {
+    max-width: 800px;
+    margin: auto;
+}
+
+#contact h2 {
+    text-align: center;
+    margin-top: 60px;
+}
+
+form p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #8E4D60;
+    margin-bottom: 8px;
+}
+
+form input[type="text"]{
+    border-radius: 30px;
+    border: solid  #ce8299 2px;
+    height: 30px;
+    width: 100%;
+    text-indent: 5px;
+}
+
+form textarea {
+    width: 100%;
+    height: 150px;
+    border-radius: 30px;
+    border: solid  #ce8299 2px;
+    margin-bottom: 30px;
+}
+
+.btn-box {
+    text-align: center;
+}
+
+.btn {
+    width: 200px;
+    height: 40px;
+    border-radius: 30px;
+    border: 0px;
+    margin-bottom: 40px;
+    background-color: #F8D9E3;
+    color: #6D3848;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.btn:hover {
+    background-color: var(--highlight-color);
+}
+
+/* ------------------Responsive----------------------- */
+@media (max-width: 768px) {
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden; 
+        font-size: 14px;
+    }
+    
+    #content, #works, #contact {
+        max-width: 100%;
+        box-sizing: border-box; 
+    }
+
+    .logo_name {
+        display: none;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .nav.visible {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        background-color: #F8D9E3;
+        position: absolute;
+        top: 100px;
+        right: 0;
+        padding: 10%;
+        border-radius: 0 0 20px 20px;
+        z-index: 9999; 
+    }
+
+    .nav li a {
+        text-decoration: none;
+        color: #64283A;
+        background-color: #F8D9E3;
+        border-radius: 30px;
+        padding: 5px 15px;
+    }
+
+
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: #64283A;
+    }
+
+    /* 
+    --------------Profile main responsive-------------------  
+    */
+
+    #content {
+        width: 100%;
+        margin: 20px auto;
+        padding: 0 15px;
+    }
+
+    .prof_img_txt {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .img_profile {
+        width: 80%;
+        margin: 10px 0;
+    }
+
+    .profile_txt {
+        flex-direction: column;
+        align-items: center;
+    }
+
+     /* 
+    --------------Skills responsive-------------------  
+    */
+
+    .skills {
+        flex-direction: column;
+    }
+
+    .skills_left,
+    .skills_right {
+        width: 90%;
+    }
+
+    /* 
+    --------------Works responsive-------------------  
+    */
+
+    #works {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .works_up {
+        margin: 20px auto;
+    }
+
+    .works_line img {
+        width: 80%;
+    }
+
+   /* ------------------Contact-----------------------*/
+
+    #contact {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    form input[type="text"],
+    form textarea {
+        font-size: 14px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
