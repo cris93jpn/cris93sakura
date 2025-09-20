@@ -5,31 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://yarn.pm/normalize.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bgmenu.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gabriela&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
-
-    <title>Cris93sakura</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="bgmenu.js"></script>
+    <title>Works</title>
 </head>
 <body>
     <header>
         <div class="header">
             <a href="profile.html" class="logo_name"><img src="img/cris93sakura.png" alt="Cris93sakura"></a>
             <a href="profile.html" class="logo"><img src="img/logo.png" alt="logo"></a>
-            <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
-            <nav>
+            <nav class="NavMenu">
                 <ul class="nav">
                     <li><a href="profile.html">Profile</a></li>
                     <li><a href="works.html">Works</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
+            <div class="Toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </header>
     <main>
         <div id="works">
-            <h2>Works</h2>
+            <h2>Works</h2> 
+
+            <h2>バナー</h2>
             <div class="works_up">
                 <div class="works_line">
                     <img src="img/halloween.png" alt="Halloween" class="work-img" data-work="halloween">
@@ -38,7 +46,7 @@
                         ハロウィーンというと少し怖い印象があるかもしれませんが、このバナーでは、可愛いキャラクターや明るい色使いで、<br>
                         親しみやすい雰囲気を大切にしました。
                     </p>
-                        <p>使用ソフト：Photoshop</p>
+                    <p><b>使用ソフト：</b>Photoshop</p>
                 </div>
             </div>
             <div class="works_up">
@@ -50,6 +58,7 @@
                         背景には、特に私が好きな春の桜と秋の紅葉を選びました。日本の象徴的な美しい風景を通して、
                         豊かな自然と季節の移ろいを感じていただければ幸いです。
                     </p>
+                    <p><b>使用ソフト：</b>Photoshop</p>
                 </div>
             </div>
             <div class="works_up">
@@ -116,6 +125,74 @@
                     <p><b>使用ソフト：</b>Photoshop</p>
                 </div>
             </div>
+
+            <h2>ランディングページ</h2>
+
+            <div class="works_up">
+                <div class="works_line">
+                    <img src="img/Cafe.png" alt="カフェ" class="work-img" data-work="カフェ">
+                    <p class="work_title">カフェのランディングページ</p>
+                    <p>カフェの新規オープンを想定し、シンプルで親しみやすいランディングページをデザインしました。  
+                        画像はGeminiを使用して生成し、全体の雰囲気に合わせて配置しています。  
+                        配色には目に優しいブルーを用い、過度に強調しすぎず、長時間見ても疲れにくいデザインを意識しました。  
+                        清潔感と落ち着きを感じさせることで、来店前から安心感を与えるよう工夫しています。</p>
+                    <p><b>使用ソフト：</b>Figma</p>
+                </div>
+            </div>
+            <div class="works_up">
+                <div class="works_line">
+                    <a href="https://cris93jpn.my.canva.site/pilates" target="_blank">
+                        <img src="img/pilates.png" alt="ピラティス" class="work-img" data-work="ピラティス">
+                    </a>
+                    <p class="work_title">ピラティスマシンのランディングページ</p>
+                    <p>マシンピラティスの魅力を伝えるランディングページを制作しました。  
+                        「姿勢改善」「腰痛の軽減」「男性にもおすすめ」といったポイントを中心に、わかりやすく情報が伝わるように構成しています。  
+                        ビジュアルにはAI（Gemini）を活用し、動きやすさや安心感を感じさせるデザインを目指しました。  
+                        全体のカラーは落ち着いたトーンを採用し、誰でも取り組みやすい雰囲気を演出しています。</p>
+                    <p><b>使用ソフト：</b>Canvas</p>
+
+                </div>
+            </div>
+
+            <h2>Webページ</h2>
+            <div class="works_up">
+                <div class="works_line">
+                    <div class="image-grid">
+                        <img src="img/Travel_Japan.png" alt="Travel Japan" class="work-img" data-work="Travel Japan">
+                        <img src="img/Travel_Guide.png" alt="Travel Japan" class="work-img" data-work="Travel Japan">
+                        <img src="img/Souvenir.png" alt="Travel Japan" class="work-img" data-work="Travel Japan">
+                        <img src="img/Onsen.png" alt="Travel Japan" class="work-img" data-work="Travel Japan">
+                        <img src="img/Hotel.png" alt="Travel Japan" class="work-img" data-work="Travel Japan">
+                        <img src="img/City_Page.png" alt="Travel Japan" class="work-img" data-work="Travel Japan">
+                    </div>
+                    <p class="work_title">Travel JapanのWebサイト</p>
+                    <p>日本を訪れる旅行者向けに「Travel Japan」のWebサイトを制作しました。  
+                        柔らかいブルーと白を基調に、見やすさと清潔感を重視したデザインに仕上げています。  
+                        画像はインターネットから引用し、日本の観光や文化をイメージできるように選びました。  
+                        全体をシンプルにまとめることで、旅行情報がわかりやすく伝わる構成を意識しました。</p>
+                    <p><b>使用ソフト：</b>Figma</p>
+
+                </div>
+            </div>
+
+            <div class="works_up">
+                <div class="works_line">
+                    <div class="image-grid">
+                        <img src="img/main.png" alt="PetTomo" class="work-img" data-work="PetTomo">
+                        <img src="img/pet_diary_add.png" alt="PetTomo" class="work-img" data-work="PetTomo">
+                        <img src="img/pet_diary_mb.png" alt="PetTomo" class="work-img" data-work="PetTomo">
+                        <img src="img/pet_profile_add_mb.png" alt="PetTomo" class="work-img" data-work="PetTomo">
+                        <img src="img/pet_profile_mb.png" alt="PetTomo" class="work-img" data-work="PetTomo">
+                    </div>
+                    <p class="work_title">PetTomoのWebサイト</p>
+                    <p>授業「システム開発」のチームプロジェクトとして制作している「PetTomo」のWebサイトです。  
+                        私はページ全体のデザインを担当しており、Figmaで作成したデザインをもとにHTML・CSSで実装を始めています。  
+                        現在は制作途中で、ページの一部デザインのみを反映していますが、ユーザーにとって見やすく、使いやすい構成を意識して作成しています。  
+                        今後もチームと協力し、機能とデザインをさらに整えて完成させる予定です。</p>
+                    <p><b>使用ソフト：</b>Figma</p>
+                </div>
+            </div>
+        
     </main>
 
     <div id="imageModal" class="modal">
@@ -179,13 +256,4 @@ window.onclick = function (event) {
         modal.style.display = "none";
     }
 }
-</script>
-<script>
-    const menuToggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('.nav');
-
-    menuToggle.addEventListener('click', () => {
-        nav.classList.toggle('visible');
-        nav.classList.toggle('hidden');
-    });
 </script>

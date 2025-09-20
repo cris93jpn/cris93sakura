@@ -5,26 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://yarn.pm/normalize.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bgmenu.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gabriela&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
-
-    <title>Cris93sakura</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="bgmenu.js"></script>
+    <title>Contact</title>
 </head>
 <body>
     <header>
         <div class="header">
             <a href="profile.html" class="logo_name"><img src="img/cris93sakura.png" alt="Cris93sakura"></a>
             <a href="profile.html" class="logo"><img src="img/logo.png" alt="logo"></a>
-            <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
-            <nav>
+            <nav class="NavMenu">
                 <ul class="nav">
                     <li><a href="profile.html">Profile</a></li>
                     <li><a href="works.html">Works</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
+            <div class="Toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </header>
     <main>
@@ -54,12 +60,3 @@
     </footer>
 </body>
 </html>
-<script>
-    const menuToggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('.nav');
-
-    menuToggle.addEventListener('click', () => {
-        nav.classList.toggle('visible');
-        nav.classList.toggle('hidden');
-    });
-</script>
