@@ -36,21 +36,22 @@
     <main>
         <div id="contact">
             <h2>Contact</h2>
-            <form action="">
+            <form action="sendmail.php" method="post">
                 <label for="name">
                     <p>名前：</p><br>
                     <input type="text" name="name" required>
                 </label>
-                <label for="mail">
+                <label for="email">
                     <p>メール：</p><br>
-                    <input type="text" name="email" required>
+                    <input type="email" name="email" required>
                 </label>
                 <label for="message">
                     <p>内容：</p><br>
-                    <textarea name="message" id="message"></textarea><br>
+                    <textarea name="message" id="message" required></textarea><br>
                 </label>
                 <div class="btn-box"><input type="submit" value="送信" class="btn"></div>
             </form>
+
         </div>
         
     </main>

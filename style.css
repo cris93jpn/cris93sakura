@@ -424,6 +424,7 @@ form textarea {
     border-radius: 30px;
     border: solid  #ce8299 2px;
     margin-bottom: 30px;
+    padding: 10px 15px; 
 }
 
 .btn-box {
